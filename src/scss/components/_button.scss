@@ -1,0 +1,21 @@
+.button {
+    display: inline-block;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: $em20 $em30;
+    border-radius: $em50;
+    transition: background .4s;
+    text-transform: uppercase;
+    line-height: 1;
+    outline: 0;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, .2);
+    }
+
+    @include tablet {
+        font-size: $em12;
+    }
+}

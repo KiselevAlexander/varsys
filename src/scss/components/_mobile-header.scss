@@ -1,0 +1,59 @@
+.mobileHeader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: $em50;
+    background: #fff;
+    z-index: 98;
+    border-bottom: 1px solid #ECECF4;
+
+    &-logo {
+        display: inline-block;
+        padding: $em10 0px $em10 $em10;
+        opacity: 0.5;
+
+        img {
+            vertical-align: middle;
+        }
+
+    }
+
+    &-buttons {
+        float: right;
+
+        a, span {
+            width: $rem44;
+            height: $rem50;
+            padding: $rem3;
+            border-left: 1px solid #ECECF4;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity .4s;
+
+            &.hidden {
+                opacity: 0;
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            img, svg {
+                display: inline-block;
+                max-width: 100%;
+                vertical-align: middle;
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1024px) {
+    .mobileHeader {
+        display: block;
+    }
+}

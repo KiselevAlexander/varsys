@@ -1,0 +1,102 @@
+$animationDuration: .5s;
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.01s $animationDuration;
+
+    &.open {
+        opacity: 1;
+        pointer-events: all;
+        transition: opacity 0.01s .0s;
+    }
+
+    @media (min-width: $tablet) {
+        display: none;
+    }
+
+}
+
+.circle {
+    position: absolute;
+    right: 0;
+    width: 200vw;;
+    height: 200vh;
+    max-width: 1px;
+    max-height: 1px;
+    background: url('/img/bgmm.jpg');
+    background-size: cover;
+    border-radius: 0 0 0 200vh;
+    overflow: hidden;
+    transition: max-width $animationDuration ease-in, max-height $animationDuration ease-in;
+
+    .open & {
+        max-width: 200vh;
+        max-height: 200vh;
+        transition: max-width $animationDuration ease-out, max-height $animationDuration ease-out;
+    }
+
+    ul {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        height: 100vh;
+        padding-top: $em44;
+        overflow-y: auto;
+        padding-bottom: 2em;
+
+        opacity: 0;
+        transition: opacity ($animationDuration / 2) ($animationDuration / 2);
+
+        .open & {
+            opacity: 1;
+        }
+
+
+        li {
+            text-align: center;
+            font-size: $em22;
+            font-weight: normal;
+            padding-top: $em10;
+            padding-bottom: $em10;
+            color:#fff;
+
+            &:before {
+                display: none;
+            }
+
+            &:last-child {
+                margin-bottom: $em30;
+            }
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: $em10;
+        right: $em10;
+        z-index: 99;
+        width: $em30;
+        height: $em30;
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ3Ljk3MSA0Ny45NzEiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ3Ljk3MSA0Ny45NzE7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNjRweCIgaGVpZ2h0PSI2NHB4Ij4KPGc+Cgk8cGF0aCBkPSJNMjguMjI4LDIzLjk4Nkw0Ny4wOTIsNS4xMjJjMS4xNzItMS4xNzEsMS4xNzItMy4wNzEsMC00LjI0MmMtMS4xNzItMS4xNzItMy4wNy0xLjE3Mi00LjI0MiwwTDIzLjk4NiwxOS43NDRMNS4xMjEsMC44OCAgIGMtMS4xNzItMS4xNzItMy4wNy0xLjE3Mi00LjI0MiwwYy0xLjE3MiwxLjE3MS0xLjE3MiwzLjA3MSwwLDQuMjQybDE4Ljg2NSwxOC44NjRMMC44NzksNDIuODVjLTEuMTcyLDEuMTcxLTEuMTcyLDMuMDcxLDAsNC4yNDIgICBDMS40NjUsNDcuNjc3LDIuMjMzLDQ3Ljk3LDMsNDcuOTdzMS41MzUtMC4yOTMsMi4xMjEtMC44NzlsMTguODY1LTE4Ljg2NEw0Mi44NSw0Ny4wOTFjMC41ODYsMC41ODYsMS4zNTQsMC44NzksMi4xMjEsMC44NzkgICBzMS41MzUtMC4yOTMsMi4xMjEtMC44NzljMS4xNzItMS4xNzEsMS4xNzItMy4wNzEsMC00LjI0MkwyOC4yMjgsMjMuOTg2eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: 50%;
+        opacity: 0;
+        transition: opacity ($animationDuration / 2) ($animationDuration);
+
+        .open & {
+            opacity: 1;
+        }
+
+    }
+
+}

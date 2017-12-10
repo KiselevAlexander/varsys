@@ -1,0 +1,56 @@
+.storeLinks {
+    position: fixed;
+    bottom: 1.45em;
+    left: 1.75em;
+    z-index: 99;
+
+    &.desktop {
+        position: fixed;
+        bottom: 1.45em;
+        left: 1.75em;
+        z-index: 99;
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &.mobile {
+        position: absolute;
+        bottom: 1.45em;
+
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: 999;
+
+        @media (min-width: $tablet) {
+            display: none;
+        }
+    }
+
+
+    @include phablet {
+        @include landscape {
+            bottom: $em16;
+        }
+    }
+
+    a {
+        display: inline-block;
+        height: $em40;
+        margin-right: $em3;
+        margin-left: $em3;
+        img {
+            height: 100%;
+        }
+
+        &.hidden {
+            opacity: 0;
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+    }
+
+}

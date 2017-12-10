@@ -1,0 +1,38 @@
+.mailTo {
+    display: block;
+    position: fixed;
+    right: $em40;
+    bottom: $em20;
+    z-index: 98;
+    cursor: pointer;
+    color: $color-red;
+    opacity: 1;
+    transition: opacity .4s, color .4s, transform .4s;
+    pointer-events: all;
+
+    &:hover {
+        transform: scale(.9);
+    }
+
+    &:active {
+        color: #fff;
+    }
+
+    svg {
+        width: $em32;
+        height: $em32;
+    }
+    
+    &.white {
+        color: #fff;
+    }
+    
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    @include phablet {
+        display: none;
+    }
+}

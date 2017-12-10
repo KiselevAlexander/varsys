@@ -1,0 +1,56 @@
+{
+    "title": "Drop. Ultimate Live Networking Tool",
+    "screen": {
+        "1": {
+            "name": "Main",
+            "title": "Ultimate Live <br />Networking&nbsp;Tool"
+        },
+        "2": {
+            "name": "Always in your phone",
+            "title": "Your business card is always in your phone",
+            "text": "Drop has perfected contact exchange by making everything as simple as snapping an image of someones business card<ul><li>We send a text message with your contact details to your acquaintance</li><li>Drop extracts and processes all the card details and saves them in a new Contact for you</li></ul>",
+            "video": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/bs-Mmg4LlPE?rel=0&amp;controls=0&amp;showinfo=0\" frameborder=\"0\" gesture=\"media\" allow=\"encrypted-media\" allowfullscreen></iframe>"
+        },
+        "3": {
+            "name": "Social and business events",
+            "title": "Social and business events",
+            "text": "Drop matches* everyone who is located in the same vicinity, and allows users to: <ul><li>A speaker can connect and share data with hundreds of user simultaneously using SPEAKER MODE</li><li>Users can exchange data amongst each other.</li></ul>",
+            "link": "* Using ResonanceTM, a unique patented technology."
+        },
+        "4": {
+            "name": "Features",
+            "title": "Drop features, free-to-use",
+            "text": "<ul><li>Auto-saves incoming shared contacts into the devices telephone book</li><li>Multiple Business Cards for any occasion</li><li>Creates geotags to remind where the introduction was made</li><li>Search through specific criteria</li><li>A large selection of Business Card Design Templates</li></ul>"
+        },
+        "5": {
+            "name": "Enterprise features",
+            "title": "Drop enterprise service features",
+            "text": "<ul><li>A unique and custom card design for your company</li><li>An \"Auto-Create\" feature for new employees’ business cards with AD/IM integration</li><li>A corporate CRM where all new contacts made by employees are saved automatically</li><li>individual employees vCard’s with constant web URL’s on your company’s Domain, i.e. http://smith.yourdomain.com</li></ul>",
+            "button": "Get corporate account"
+        },
+        "6": {
+            "name": "Download app",
+            "title": "Download app",
+            "description": "Try it right now! Download DROP on your device, drop the cards and start connecting!",
+            "form": {
+                "title": "Send the link to",
+                "phone": "Phone",
+                "email": "Email"
+            }
+        }
+    },
+    "fields": {
+        "phone": "Phone number",
+        "phone-value": ""
+    },
+    "errors": {
+        "empty_phone": "Please enter your phone number",
+        "empty_email": "Please enter your email address",
+        "wrong_phone": "Please check phone number",
+        "wrong_email": "Please check email address",
+        "other": "Something went wrong! Please try again later"
+    },
+    "messages" : {
+        "success": "App link was sent you! Thanks!"
+    }
+}

@@ -1,0 +1,103 @@
+$em3: .188em;
+$em5: .313em;
+$em10: .625em;
+$em11: .688em;
+$em12: .750em;
+$em14: .875em;
+$em15: .938em;
+$em16: 1em;
+$em18: 1.125em;
+$em20: 1.25em;
+$em22: 1.375em;
+$em24: 1.5em;
+$em26: 1.625em;
+$em27: 1.688em;
+$em28: 1.75em;
+$em30: 1.875em;
+$em32: 2em;
+$em35: 2.188em;
+$em40: 2.5em;
+$em44: 2.75em;
+$em50: 3.125em;
+$em60: 3.75em;
+$em70: 4.375em;
+$em80: 5em;
+$em100: 6.25em;
+$em200: 12.5em;
+
+$rem3: .188rem;
+$rem5: .313rem;
+$rem10: .625rem;
+$rem11: .688rem;
+$rem12: .750rem;
+$rem14: .875rem;
+$rem15: .938rem;
+$rem16: 1rem;
+$rem18: 1.125rem;
+$rem20: 1.25rem;
+$rem22: 1.375rem;
+$rem24: 1.5rem;
+$rem26: 1.625rem;
+$rem27: 1.688rem;
+$rem28: 1.75rem;
+$rem30: 1.875rem;
+$rem32: 2rem;
+$rem35: 2.188rem;
+$rem40: 2.5rem;
+$rem44: 2.75rem;
+$rem50: 3.125rem;
+$rem60: 3.75rem;
+$rem70: 4.375rem;
+$rem80: 5rem;
+$rem100: 6.25rem;
+$rem200: 12.5rem;
+
+$color-red: #f62417;
+$color-green: #2ecc71;
+$color-gray: #616f80;
+$color-grayLight: #c0c0c0;
+$color-grayDark: #454f54;
+
+$retina: 2700px;
+$desktop: 1024px;
+$tablet: 980px;
+$phablet: 760px;
+$phone: 320px;
+
+
+
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin phablet {
+    @media screen and (max-width: $phablet) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media screen and (max-width: $phone) {
+        @content;
+    }
+}
+
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin portrait {
+    @media screen and (orientation: portrait) {
+        @content;
+    }
+}

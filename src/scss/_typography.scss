@@ -1,0 +1,96 @@
+.normalText {
+
+    font-size: $em18;
+    line-height: 1.833;
+    color: $color-grayDark;
+
+    @media (max-height: 800px) {
+        font-size: $em16;
+    }
+
+    @include tablet {
+        line-height: 1.5;
+    }
+
+    @include phablet {
+        font-size: $em14;
+        line-height: 1.5;
+    }
+
+    @include phone {
+        font-size: $em12;
+        line-height: 1.5;
+    }
+
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: $em50;
+    line-height: 1.2;
+    color: $color-gray;
+
+    @media (max-height: 800px) {
+        font-size: $em32;
+        line-height: 1;
+        margin-bottom: $rem22;
+    }
+    
+    @include desktop {
+        font-size: $em32;
+    }
+
+    @include phablet {
+        font-size: $em27;
+        line-height: 1;
+        margin-bottom: $rem22;
+    }
+
+    @include phone {
+        font-size: $em16;
+    }
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: $em24;
+    line-height: 1.2;
+    color: $color-gray;
+
+    @media (max-height: 800px) {
+        font-size: $em20;
+    }
+}
+
+p {
+    @extend .normalText;
+
+    @include tablet {
+        margin: 0;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    
+    li {
+        position: relative;
+        list-style-type: none;
+        padding-left: 1em;
+
+        @extend .normalText;
+        
+        &:before {
+            position: absolute;
+            left: 0;
+            content: '-';
+        }
+    }
+}
+
+.desktopBr {
+    @media (min-width: $tablet) {
+        display: block;
+    }
+}

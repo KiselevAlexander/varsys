@@ -1,0 +1,71 @@
+.site-logo {
+    position: fixed;
+    top: $em28;
+    left: $em28;
+    z-index: 99;
+    width: 11em;
+    height: 3.25em;
+    color: $color-gray;
+    opacity: 1;
+    transition: opacity .4s, color .4s;
+    cursor: pointer;
+
+    svg {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    @media (min-width: $tablet) {
+        &.hidden {
+            opacity: 0;
+        }
+
+        &.white {
+            color: #fff;
+        }
+    }
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .site-logo {
+        position: fixed;
+        top: 0;
+        left: 8px;
+        z-index: 99;
+        width: 6.563rem;
+        height: $rem50;
+        opacity: 1;
+        color: $color-gray !important;
+    }
+
+}
+
+/**
+ * SVG Styles
+ */
+
+.lp-1{fill:url(#linear-gradient);}
+.lp-2{fill:none;}
+.lp-3{clip-path:url(#clip-path);}
+.lp-4{mask:url(#mask);}
+.lp-5{fill:url(#linear-gradient-2);}
+.lp-6{fill:url(#linear-gradient-3);}
+.lp-8{fill:url(#linear-gradient-4);}
+.lp-9{fill:url(#linear-gradient-5);}
+.lp-10{fill:url(#linear-gradient-6);}
+.lp-11{fill:url(#linear-gradient-7);}
+.lp-12{fill:url(#linear-gradient-8);}
+.lp-13{fill:url(#linear-gradient-9);}
+.lp-14{fill:url(#linear-gradient-10);}
+.lp-15{fill:url(#linear-gradient-11);}
+.lp-16{fill:url(#linear-gradient-12);}
+.lp-17{fill:url(#linear-gradient-13);}
+.lp-18{fill:url(#linear-gradient-14);}
+.lp-19{fill:url(#linear-gradient-15);}
+.lp-20{fill:url(#linear-gradient-16);}
+.lp-21{fill:url(#linear-gradient-17);}
+.lp-22{fill:url(#linear-gradient-18);}
+.lp-23{fill:#270d00;}

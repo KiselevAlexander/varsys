@@ -1,0 +1,18 @@
+.resonanceLink {
+    position: absolute;
+    bottom: 15%;
+    padding-right: $em20;
+
+    @include tablet {
+        bottom: $em40;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

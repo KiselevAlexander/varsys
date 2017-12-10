@@ -1,0 +1,173 @@
+.sendLinkForm {
+
+    @include phablet {
+        display: none;
+    }
+
+    .input-group {
+        position: relative;
+
+        .field {
+
+            &-phone {
+                transform: translateY(-100%);
+                opacity: 0;
+                pointer-events: none;
+
+                &.active {
+                    opacity: 1;
+                    transform: translateY(0);
+                    pointer-events: all;
+                }
+            }
+
+            &-email {
+                transform: translateY(0%);
+                opacity: 0;
+                pointer-events: none;
+
+                &.active {
+                    opacity: 1;
+                    transform: translateY(-100%);
+                    pointer-events: all;
+
+                }
+
+            }
+
+        }
+
+        [class^="field"] {
+            transition: transform .4s, opacity .4s;
+        }
+    }
+
+    input {
+        display: inline-block;
+        width: 100%;
+        max-width: calc(100% - 8rem);
+        border-radius: $em44;
+        background: transparent;
+        border: solid 1px $color-grayDark;
+        color: $color-grayDark;
+        font-size: $em18;
+        padding: 1em;
+        outline: 0;
+        transition: border .4s;
+        margin: $em5 0;
+
+        &:focus {
+            border-color: $color-red;
+        }
+
+        &:disabled,
+        &[disabled] {
+            border-color: $color-grayLight;
+            color: $color-grayLight;
+        }
+    }
+
+    button[type="submit"] {
+        position: absolute;
+        top: $em5;
+        right: 0;
+        display: inline-block;
+        width: 100%;
+        max-width: 7rem;
+        border-radius: $em44;
+        background: transparent;
+        border: solid 1px $color-red;
+        font-size: $em18;
+        line-height: 1;
+        color: $color-red;
+        padding: 1em;
+        outline: 0;
+        cursor: pointer;
+        transition: background .4s, color .4s;
+
+        &:hover {
+            background-color: $color-red;
+            color: #fff;
+        }
+
+        &:disabled,
+        &[disabled] {
+            background-color: $color-grayLight;
+            border-color: $color-grayLight;
+            color: #fff;
+        }
+    }
+
+    &-switcher {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+
+        &:before {
+            margin-top: 1px;
+            display: block;
+            content: '';
+            width: 100%;
+            height: $em3;
+            background-color: $color-grayLight;
+        }
+
+        .pointer {
+            position: absolute;
+            top: 0;
+            width: 50%;
+            height: $em5;
+            border-radius: $em5;
+            background-color: $color-red;
+            transition: transform .1s ease-out, width .2s .1s ease-in;
+        }
+
+
+        &.email .pointer {
+            width: 100%;
+            transform: translateX(50%);
+            transition: transform .2s .1s ease-in, width .1s ease-out;
+        }
+
+        button {
+            display: inline-block;
+            width: 48.5%;
+            background-color: transparent;
+            border: none;
+            padding: 1em 0;
+            text-align: center;
+            font-size: $em26;
+            text-transform: uppercase;
+            margin: 0;
+            outline: 0;
+            cursor: pointer;
+            color: $color-gray;
+            transition: color .4s;
+
+            &:hover {
+                color: $color-red;
+            }
+
+            &.active,
+            &:active {
+                color: $color-red;
+            }
+        }
+    }
+
+    .submitMessage {
+        position: absolute;
+        font-weight: 500;
+        color: $color-green;
+        opacity: 0;
+        transition: opacity .4s;
+
+        &.showed {
+            opacity: 1;
+        }
+        
+        &.error {
+            color: $color-red;
+        }
+    }
+}

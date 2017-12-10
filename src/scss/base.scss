@@ -1,0 +1,34 @@
+@import 'variables',
+        'fonts';
+
+* {
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "sf_ui_text", Arial, serif;
+}
+
+@import 'typography',
+        'components/animation',
+        'components/button',
+        'components/site-logo',
+        'components/slides',
+        'components/page-slider',
+        'components/pagination',
+        'components/store-links',
+        'components/mobile-menu',
+        'components/mobile-header',
+        'components/back-to-top',
+        'components/mail-to',
+        'components/resonance-link',
+        'components/video-container',
+        'components/form.scss';
